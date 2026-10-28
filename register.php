@@ -1,3 +1,8 @@
+<?php
+date_default_timezone_set('Europe/Moscow');
+$currentHour = (int)date('H');
+$body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -107,18 +112,17 @@
     </style>
 </head>
 
-<body class="register-body">
-
+<body class="register-body <?php echo $body_class; ?>">
     <nav id="navigation">
         <ul id="menu">
-            <li><a href="index.html">О НАС</a></li>
-            <li><a href="index.html">О ПЛАТФОРМЕ</a></li>
-            <li><a href="index.html">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a></li>
-            <li><a href="index.html">КОНКУРС</a></li>
-            <li><a href="index.html">СПОНСОРАМ</a></li>
-            <li><a href="index.html">НОВОСТИ</a></li>
-            <li><a href="index.html">КОНТАКТЫ</a></li>
-            <li><a href="login.html" class="login-btn">ВОЙТИ</a></li>
+            <li><a href="index.php">О НАС</a></li>
+            <li><a href="index.php">О ПЛАТФОРМЕ</a></li>
+            <li><a href="index.php">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a></li>
+            <li><a href="index.php">КОНКУРС</a></li>
+            <li><a href="index.php">СПОНСОРАМ</a></li>
+            <li><a href="index.php">НОВОСТИ</a></li>
+            <li><a href="index.php">КОНТАКТЫ</a></li>
+            <li><a href="login.php" class="login-btn">ВОЙТИ</a></li>
         </ul>
     </nav>
 

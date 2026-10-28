@@ -280,6 +280,181 @@ footer {
     margin: 0 auto 10px auto;
 }
 
+
+
+
+body.dark-theme {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body.dark-theme #main-header {
+    background-color: #161b22;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #21262d;
+}
+
+
+body.dark-theme .logo-title {
+    color: #f0f6fc;
+}
+
+body.dark-theme .logo-subtitle {
+    color: #8b949e;
+}
+
+
+body.dark-theme #navigation a {
+    color: #c9d1d9;
+}
+
+body.dark-theme #navigation a:hover {
+    color: #8bc34a;
+}
+
+body.dark-theme .login-btn {
+    background: #7cb342 !important;
+    color: white !important;
+}
+
+body.dark-theme .login-btn:hover {
+    background: #689f38 !important;
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.4);
+}
+
+
+body.dark-theme #hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/forest-bg.jpg');
+}
+
+
+body.dark-theme .about-text h2,
+body.dark-theme .section-title {
+    color: #f0f6fc;
+}
+
+body.dark-theme .about-text p {
+    color: #8b949e;
+}
+
+
+body.dark-theme .btn-primary {
+    background: #7cb342;
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3);
+}
+
+body.dark-theme .btn-primary:hover {
+    background: #689f38;
+    box-shadow: 0 6px 20px rgba(124, 179, 66, 0.5);
+}
+
+
+body.dark-theme .program-card {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    border: 1px solid #21262d;
+}
+
+body.dark-theme .program-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.9);
+}
+
+
+body.dark-theme footer {
+    background-color: #0d1117;
+    border-top: 1px solid #21262d;
+}
+
+body.dark-theme .footer-title {
+    color: #f0f6fc;
+}
+
+body.dark-theme .footer-subtitle {
+    color: #8b949e;
+}
+
+body.dark-theme .footer-nav a {
+    color: #8bc34a;
+}
+
+body.dark-theme .footer-nav a:hover {
+    color: #a5d6a7;
+}
+
+
+
+body.login-body.dark-theme,
+body.register-body.dark-theme {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../images/forest-bg.jpg');
+}
+
+body.dark-theme .glass-card {
+    background: rgba(22, 27, 34, 0.85);
+    border: 1px solid rgba(124, 179, 66, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-theme .glass-card fieldset {
+    border: 2px solid rgba(124, 179, 66, 0.4);
+}
+
+body.dark-theme .glass-card legend {
+    color: #f0f6fc;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-theme .glass-card label {
+    color: #c9d1d9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-theme .glass-card input[type="text"],
+body.dark-theme .glass-card input[type="email"],
+body.dark-theme .glass-card input[type="password"] {
+    background: rgba(13, 17, 23, 0.9);
+    border: 1px solid #30363d;
+    color: #f0f6fc;
+}
+
+body.dark-theme .glass-card input:focus {
+    background: rgba(22, 27, 34, 0.95);
+    border-color: #7cb342;
+    box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.2);
+    outline: none;
+}
+
+body.dark-theme .glass-card button[type="submit"] {
+    background: #7cb342;
+    color: white;
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.4);
+}
+
+body.dark-theme .glass-card button[type="submit"]:hover {
+    background: #689f38;
+    box-shadow: 0 6px 20px rgba(124, 179, 66, 0.6);
+}
+
+body.dark-theme .glass-card button[type="reset"] {
+    background: rgba(48, 54, 61, 0.6);
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+body.dark-theme .glass-card button[type="reset"]:hover {
+    background: rgba(48, 54, 61, 0.9);
+    border-color: #8b949e;
+}
+
+body.dark-theme .glass-card a {
+    color: #8bc34a !important;
+}
+
+body.dark-theme .glass-card a:hover {
+    color: #a5d6a7 !important;
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .programs-grid {
         grid-template-columns: 1fr;

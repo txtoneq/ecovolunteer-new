@@ -1,3 +1,8 @@
+<?php
+date_default_timezone_set('Europe/Moscow');
+$currentHour = (int)date('H');
+$body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -6,12 +11,10 @@
     <meta name="description" content="Лесные волонтёры - платформа волонтёров России">
     <meta name="author" content="Эко-волонтёрство">
     <link rel="stylesheet" href="content/css/style.css">
-    <title>
-        Лесные волонтёры - Вместе мы сила!
-    </title>
+    <title>Лесные волонтёры - Вместе мы сила!</title>
 </head>
 
-<body>
+<body class="<?php echo $body_class; ?>">
     <header id="main-header">
         <div class="logo">
             <img src="content/images/logo.png" alt="Лесные волонтёры">
@@ -22,14 +25,14 @@
         </div>
         <nav id="navigation">
             <ul id="menu">
-                <li><a href="#about">О НАС</a></li>
-                <li><a href="#platform">О ПЛАТФОРМЕ</a></li>
-                <li><a href="#programs">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a></li>
-                <li><a href="#contest">КОНКУРС</a></li>
-                <li><a href="#sponsors">СПОНСОРАМ</a></li>
-                <li><a href="#news">НОВОСТИ</a></li>
-                <li><a href="#contacts">КОНТАКТЫ</a></li>
-                <li><a href="login.html" class="login-btn">ВОЙТИ</a></li>
+                <li><a href="index.php">О НАС</a></li>
+                <li><a href="index.php">О ПЛАТФОРМЕ</a></li>
+                <li><a href="index.php">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a></li>
+                <li><a href="index.php">КОНКУРС</a></li>
+                <li><a href="index.php">СПОНСОРАМ</a></li>
+                <li><a href="index.php">НОВОСТИ</a></li>
+                <li><a href="index.php">КОНТАКТЫ</a></li>
+                <li><a href="login.php" class="login-btn">ВОЙТИ</a></li>
             </ul>
         </nav>
     </header>

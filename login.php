@@ -1,3 +1,8 @@
+<?php
+date_default_timezone_set('Europe/Moscow');
+$currentHour = (int)date('H');
+$body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -7,9 +12,7 @@
     <meta name="author" content="Эко-волонтёрство">
     <link rel="stylesheet" href="content/css/style.css">
     <link rel="stylesheet" href="content/css/forms.css">
-    <title>
-        Вход - Лесные волонтёры
-    </title>
+    <title>Вход - Лесные волонтёры</title>
     <style>
         body.login-body {
             background-image: url('content/images/forest-bg.jpg');
@@ -95,19 +98,17 @@
     </style>
 </head>
 
-<body class="login-body">
-
-    
+<body class="login-body <?php echo $body_class; ?>">
     <nav id="navigation">
         <ul id="menu">
-            <li><a href="index.html">О НАС</a></li>
-            <li><a href="index.html">О ПЛАТФОРМЕ</a></li>
-            <li><a href="index.html">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a></li>
-            <li><a href="index.html">КОНКУРС</a></li>
-            <li><a href="index.html">СПОНСОРАМ</a></li>
-            <li><a href="index.html">НОВОСТИ</a></li>
-            <li><a href="index.html">КОНТАКТЫ</a></li>
-            <li><a href="login.html" class="login-btn">ВОЙТИ</a></li>
+            <li><a href="index.php">О НАС</a></li>
+            <li><a href="index.php">О ПЛАТФОРМЕ</a></li>
+            <li><a href="index.php">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a></li>
+            <li><a href="index.php">КОНКУРС</a></li>
+            <li><a href="index.php">СПОНСОРАМ</a></li>
+            <li><a href="index.php">НОВОСТИ</a></li>
+            <li><a href="index.php">КОНТАКТЫ</a></li>
+            <li><a href="login.php" class="login-btn">ВОЙТИ</a></li>
         </ul>
     </nav>
 
@@ -116,7 +117,7 @@
             <table>
                 <tr>
                     <td>
-                        <form method="get" action="index.html">
+                        <form method="get" action="index.php">
                             <fieldset>
                                 <legend>Вход в систему</legend>
                                 <p>
@@ -132,7 +133,7 @@
                                     <button type="reset">Очистить</button>
                                 </p>
                                 <p style="text-align: center; margin-top: 15px;">
-                                    <a href="register.html" style="color: white; text-decoration: underline;">Нет аккаунта? Зарегистрироваться</a>
+                                    <a href="register.php" style="color: white; text-decoration: underline;">Нет аккаунта? Зарегистрироваться</a>
                                 </p>
                             </fieldset>
                         </form>
