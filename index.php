@@ -15,27 +15,7 @@ $body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
 </head>
 
 <body class="<?php echo $body_class; ?>">
-    <header id="main-header">
-        <div class="logo">
-            <img src="content/images/logo.png" alt="Лесные волонтёры">
-            <div class="logo-text">
-                <span class="logo-title">Лесные волонтёры</span>
-                <span class="logo-subtitle">платформа волонтёров России</span>
-            </div>
-        </div>
-        <nav id="navigation">
-            <ul id="menu">
-                <li><a href="index.php">О НАС</a></li>
-                <li><a href="index.php">О ПЛАТФОРМЕ</a></li>
-                <li><a href="index.php">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a></li>
-                <li><a href="index.php">КОНКУРС</a></li>
-                <li><a href="index.php">СПОНСОРАМ</a></li>
-                <li><a href="index.php">НОВОСТИ</a></li>
-                <li><a href="index.php">КОНТАКТЫ</a></li>
-                <li><a href="login.php" class="login-btn">ВОЙТИ</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.php'; ?>
 
     <section id="hero">
         <div class="hero-content">
@@ -135,19 +115,7 @@ $body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
     </div>
 </section>
 
-    <footer>
-        <div class="footer-content">
-            <img src="content/images/logo.png" alt="Лесные волонтёры" class="footer-logo">
-            <nav class="footer-nav">
-                <a href="#about">О НАС</a>
-                <a href="#platform">О ПЛАТФОРМЕ</a>
-                <a href="#programs">ВОЛОНТЁРСКИЕ ПРОГРАММЫ</a>
-                <a href="#contacts">КОНТАКТЫ</a>
-            </nav>
-            <p class="footer-title">Лесные волонтёры</p>
-            <p class="footer-subtitle">платформа волонтёров России</p>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

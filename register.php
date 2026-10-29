@@ -131,7 +131,7 @@ $body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
             <table>
                 <tr>
                     <td>
-                        <form method="post" action="login.html">
+                        <form method="post" action="login.php">
                             <fieldset>
                                 <legend>Регистрация</legend>
                                 <p>
@@ -159,7 +159,7 @@ $body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
                                     <button type="reset">Очистить</button>
                                 </p>
                                 <p style="text-align: center; margin-top: 15px;">
-                                    <a href="login.html" style="color: white; text-decoration: underline;">Уже есть аккаунт? Войти</a>
+                                    <a href="login.php" style="color: white; text-decoration: underline;">Уже есть аккаунт? Войти</a>
                                 </p>
                             </fieldset>
                         </form>
