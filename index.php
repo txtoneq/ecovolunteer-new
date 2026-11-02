@@ -1,7 +1,11 @@
 <?php
-date_default_timezone_set('Europe/Moscow');
-$currentHour = (int)date('H');
-$body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
+date_default_timezone_set('Asia/Yekaterinburgh');
+$currenthour = date('H');
+if ($currenthour >= 20 || $currenthour < 6) {
+    $body_class = 'dark-theme';
+} else {
+    $body_class = '';
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -43,30 +47,26 @@ $body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
                 $allText = $allText . "Помощь экоактивистам в Красноярском крае Декабрь 2025 декабрь 2026 ";
                 $allText = $allText . "Экопоходы в Екатеринбурге Май октябрь 2026";
                 $allWords = explode(' ', $allText);
-                $vowels = 0;
+                $glasn = 0;
                 $letters = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
 
-                for ($i = 0; $i < mb_strlen($allText, 'UTF-8'); $i++) {
-                    $letter = mb_substr($allText, $i, 1, 'UTF-8');
+                for ($i = 0; $i < mb_strlen($allText); $i++) {
+                    $letter = mb_substr($allText, $i, 1);
 
                     if (strpos($letters, $letter) !== false) {
-                        $vowels++;
+                        $glasn++;
+                    }
+                }
+                for ($i = 0; $i < count($words); $i++) {
+                    if (($i + 1) % 2 == 0) {
+                        echo '<span class="word-even">' . $words[$i] . '</span> ';
+                    } else {
+                        echo '<span class="word-odd">' . $words[$i] . '</span> ';
                     }
                 }
                 ?>
-                <p class="about-text-paragraph">
-                    <?php
-                    for ($i = 0; $i < count($words); $i++) {
-                        if (($i + 1) % 2 == 0) {
-                            echo '<span class="word-even">' . $words[$i] . '</span> ';
-                        } else {
-                            echo '<span class="word-odd">' . $words[$i] . '</span> ';
-                        }
-                    }
-                    ?>
-                </p>
                 <p class="text-statistics">
-                    Количество гласных букв: <?php echo $vowels; ?><br>
+                    Количество гласных букв: <?php echo $glasn; ?><br>
                     Количество слов: <?php echo count($allWords); ?>
                 </p>
                 <button class="btn-primary">ПОДРОБНЕЕ</button>
