@@ -28,7 +28,47 @@ $body_class = ($currentHour >= 20 || $currentHour < 6) ? 'dark-theme' : '';
         <div class="about-section">
             <div class="about-text">
                 <h2>О ПЛАТФОРМЕ</h2>
-                <p>«Лесные волонтёры» — платформа волонтёров России, объединяющая волонтёрские проекты. Здесь встречаются люди и организации, заинтересованные в сохранении лесов: те, кому нужна помощь, и те, кто готов её оказать.</p>
+                <?php
+                $text = "«Лесные волонтёры» — платформа волонтёров России, объединяющая волонтёрские проекты. Здесь встречаются люди и организации, заинтересованные в сохранении лесов: те, кому нужна помощь, и те, кто готов её оказать.";
+                $words = explode(' ', $text);
+                $allText = "Лесные волонтёры Вместе мы сила О платформе " . $text;
+                $allText = $allText . " Волонтёрские программы ";
+                $allText = $allText . "Волонтёрство в нацпарке Зюраткуль Июнь август ";
+                $allText = $allText . "Помощь ботаническому саду на Алтае Июнь август ";
+                $allText = $allText . "Постройка экотропы на Байкале Июль ";
+                $allText = $allText . "Волонтёрство в парке Ергаки Удалённое участие ";
+                $allText = $allText . "Помощь в борьбе с лесными пожарами Удалённое участие ";
+                $allText = $allText . "Помощь парку на Сахалине Удалённое участие ";
+                $allText = $allText . "Помощь учёным-фенологам Удалённое участие ";
+                $allText = $allText . "Помощь экоактивистам в Красноярском крае Декабрь 2025 декабрь 2026 ";
+                $allText = $allText . "Экопоходы в Екатеринбурге Май октябрь 2026";
+                $allWords = explode(' ', $allText);
+                $vowels = 0;
+                $letters = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
+
+                for ($i = 0; $i < mb_strlen($allText, 'UTF-8'); $i++) {
+                    $letter = mb_substr($allText, $i, 1, 'UTF-8');
+
+                    if (strpos($letters, $letter) !== false) {
+                        $vowels++;
+                    }
+                }
+                ?>
+                <p class="about-text-paragraph">
+                    <?php
+                    for ($i = 0; $i < count($words); $i++) {
+                        if (($i + 1) % 2 == 0) {
+                            echo '<span class="word-even">' . $words[$i] . '</span> ';
+                        } else {
+                            echo '<span class="word-odd">' . $words[$i] . '</span> ';
+                        }
+                    }
+                    ?>
+                </p>
+                <p class="text-statistics">
+                    Количество гласных букв: <?php echo $vowels; ?><br>
+                    Количество слов: <?php echo count($allWords); ?>
+                </p>
                 <button class="btn-primary">ПОДРОБНЕЕ</button>
             </div>
             <div class="about-image">
